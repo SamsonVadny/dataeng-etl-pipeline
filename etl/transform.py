@@ -4,7 +4,7 @@ import pandas as pd
 def transform_products(product_df):
     df = product_df.copy()
 
-    # Extrai só o nome da categoria (em vez do dicionário completo)
+    
     df['category'] = df['category'].apply(lambda x: x['name'] if isinstance(x, dict) else x)
 
     df = df.rename(columns={
